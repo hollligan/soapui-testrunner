@@ -16,5 +16,5 @@ WORKDIR /opt/SoapUI
 # Set environment
 ENV PATH ${PATH}:/opt/SoapUI/bin
 
-# run /opt/SoapUI/bin/testrunner.sh /tmp/soapui-project.xml
-CMD ["/opt/SoapUI/bin/testrunner.sh", "/tmp/soapui-project.xml","-s\"$(testSuiteName)\""]
+ENTRYPOINT ["/opt/SoapUI/bin/testrunner.sh","/tmp/soapui-project.xml"]
+CMD ["sh"]
